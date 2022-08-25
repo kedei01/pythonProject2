@@ -1,0 +1,39 @@
+<!DOCTYPE html>xa
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+<body>
+    <form method="post" action="/emp">
+        {% csrf_token %}
+        <div>
+            <br>
+            <p>
+                <h3>Enter Details</h3>
+            </p>
+            <div>
+                <p>Employee Id:</p>{{form.eid}}
+            </div>
+            <div>
+                <p>Employee Name:</p>{{form.ename}}
+            </div>
+            <div>
+                <p>Employee Email:</p>{{form.eemail}}
+            </div>
+            <div>
+                <p>Employee Contact:</p>{{form.econtact}}
+            </div>
+            <div>
+                <br>
+                <td colspan="2" align="center">
+                <button type="submit">Submit</button>
+                </td>po
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

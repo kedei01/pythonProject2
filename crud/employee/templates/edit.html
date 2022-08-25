@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+<form method="post" action="/update/{{employee.id}}">
+     {% csrf_token %}
+    <div>
+        <br>
+        <p>
+            <h3>Update Details</h3>
+        </p>
+    </div>
+    <div>
+        <p>Employee Id:</p>
+        <div>
+            <input type="text" name="eid" value="{{employee.eid}}"/>
+        </div>
+    </div>
+    <div>
+        <p>Employee Name:</p>
+        <div>
+            <input type="text" name="ename" value="{{employee.ename}}"/>
+        </div>
+    </div>
+    <div>
+        <p>Employee Email:</p>
+        <div>
+            <input type="email" name="eemail" value="{{employee.eemail}}"/>
+        </div>
+    </div>
+    <div>
+        <p>Employee Contact:</p>
+        <div>
+            <input type="text" name="econtact" value="{{employee.econtact}}"/>
+        </div>
+    </div>
+    <div>
+        <br>
+        <td colspan="2" align="center">
+        <button type="submit">Update</button>
+        </td>
+    </div>
+</form>
+</body>
+</html>
